@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Scheduler - Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <h1>AI Scheduler</h1>
+    <div>
+      <span id="welcome-msg" style="margin-right: 1rem;"></span>
+      <button id="logout-btn">Log Out</button>
+    </div>
+  </div>
+
+  <div class="dashboard-wrapper">
+    <div class="ai-card">
+      <h2>Add an Event with AI</h2>
+      <p style="color:#6b7280; font-size:0.9rem; margin-top:-0.5rem;">
+        Describe your event in plain English, e.g. "Dentist appointment next Friday at 3pm".
+      </p>
+      <div class="ai-input-row">
+        <input id="ai-text" placeholder="Type your scheduling request..." />
+        <button id="ai-submit-btn">Add with AI</button>
+      </div>
+      <span id="manual-toggle" class="manual-toggle">+ Add event manually instead</span>
+
+      <form id="manual-form" class="manual-form hidden">
+        <input id="manual-title" placeholder="Title" required />
+        <input id="manual-date" type="date" required />
+        <input id="manual-time" type="time" />
+        <button type="submit">Add Event</button>
+      </form>
+
+      <div id="status-msg" class="status-msg"></div>
+    </div>
+
+    <div class="events-card">
+      <h2>Your Events</h2>
+      <div id="events-list"></div>
+    </div>
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

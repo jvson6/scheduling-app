@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.navbar h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.navbar button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #4338ca;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabs button.active {
+  background: #4338ca;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+input {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button[type='submit'] {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: #4338ca;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background: #3730a3;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dashboard-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.ai-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ai-card h2 {
+  margin-top: 0;
+  color: #4338ca;
+}
+
+.ai-input-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.ai-input-row input {
+  flex: 1;
+}
+
+.ai-input-row button {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #4338ca;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ai-input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.manual-toggle {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #4338ca;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.manual-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.manual-form input {
+  padding: 0.5rem;
+}
+
+.manual-form button {
+  grid-column: span 3;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.events-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.events-card h2 {
+  margin-top: 0;
+  color: #4338ca;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+.event-info strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.event-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.event-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+.event-actions .delete-btn {
+  color: #dc2626;
+}
+
+.event-actions .edit-btn {
+  color: #2563eb;
+}
+
+.status-msg {
+  font-size: 0.85rem;
+  min-height: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.status-msg.error {
+  color: #dc2626;
+}
+
+.status-msg.success {
+  color: #16a34a;
+}
+
+.empty-state {
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  .manual-form {
+    grid-template-columns: 1fr;
+  }
+  .manual-form button {
+    grid-column: span 1;
+  }
+}
